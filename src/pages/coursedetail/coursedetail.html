@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar transparent>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content >
+<div *ngFor="let cdetail of responseData">
+  <img src="{{imaPath}}{{cdetail.images}}" width="100%">
+  <div padding>
+    <ion-card-title> 
+      {{cdetail.name}}
+      <div [innerHtml]="cdetail.description"></div>
+      <p>
+        Price : {{cdetail.price}}
+      </p>
+      <p>
+        Date : {{cdetail.create_at}}
+      </p>
+    </ion-card-title>
+  </div> 
+</div>
+</ion-content>

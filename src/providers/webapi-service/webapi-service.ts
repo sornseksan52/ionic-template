@@ -41,11 +41,11 @@ export class WebapiServiceProvider {
   }
 
   // Get
-  getData(objdata, segment) {
+  getData(segment) {
     return new Promise((resolve, reject) => {
       // header
       let headers = new Headers();
-      headers.append('Authorization', 'Basic YWRtaW46MTIzNA==');
+      headers.append('Authorization',this.global.authKey);
       headers.append('Content-Type', 'application/json');
 
       this.http.get(this.baseUrl + segment, { headers: headers })

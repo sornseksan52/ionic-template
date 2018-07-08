@@ -20,6 +20,7 @@ import { LoginPage } from '../pages/login/login';
 import { WebapiServiceProvider } from '../providers/webapi-service/webapi-service';
 import { HttpModule  } from '@angular/http';
 import { GlobalProvider } from '../providers/global/global';
+import { CoursedetailPage } from '../pages/coursedetail/coursedetail';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { GlobalProvider } from '../providers/global/global';
     SideSettingPage,
     TabsPage,
     RegisterPage,
-    LoginPage
+    LoginPage,
+    CoursedetailPage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import { GlobalProvider } from '../providers/global/global';
     SideSettingPage,
     TabsPage,
     RegisterPage,
-    LoginPage
+    LoginPage,
+    CoursedetailPage
   ],
   providers: [
     StatusBar,
