@@ -21,11 +21,13 @@ import { WebapiServiceProvider } from '../providers/webapi-service/webapi-servic
 import { HttpModule } from '@angular/http';
 import { GlobalProvider } from '../providers/global/global';
 import { CoursedetailPage } from '../pages/coursedetail/coursedetail';
+import { TabChatPage } from '../pages/tab-chat/tab-chat';
 
 // firebase module
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { TabChatPage } from '../pages/tab-chat/tab-chat';
+import { NativeAudio } from '@ionic-native/native-audio'; //native at to privider
+
 
 var config = {
   apiKey: "AIzaSyAtNLlQy8tkYN2pIkIb_iR68PybrcvYb6s",
@@ -84,7 +86,8 @@ var config = {
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     WebapiServiceProvider,
-    GlobalProvider
+    GlobalProvider,
+    NativeAudio
   ]
 })
 export class AppModule { }
