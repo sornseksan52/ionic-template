@@ -18,9 +18,23 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { RegisterPage } from '../pages/register/register';
 import { LoginPage } from '../pages/login/login';
 import { WebapiServiceProvider } from '../providers/webapi-service/webapi-service';
-import { HttpModule  } from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { GlobalProvider } from '../providers/global/global';
 import { CoursedetailPage } from '../pages/coursedetail/coursedetail';
+
+// firebase module
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { TabChatPage } from '../pages/tab-chat/tab-chat';
+
+var config = {
+  apiKey: "AIzaSyAtNLlQy8tkYN2pIkIb_iR68PybrcvYb6s",
+  authDomain: "ionicchat-39599.firebaseapp.com",
+  databaseURL: "https://ionicchat-39599.firebaseio.com",
+  projectId: "ionicchat-39599",
+  storageBucket: "ionicchat-39599.appspot.com",
+  messagingSenderId: "380258696236"
+};
 
 @NgModule({
   declarations: [
@@ -37,12 +51,15 @@ import { CoursedetailPage } from '../pages/coursedetail/coursedetail';
     TabsPage,
     RegisterPage,
     LoginPage,
-    CoursedetailPage
+    CoursedetailPage,
+    TabChatPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule 
+    HttpModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(config)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -59,14 +76,15 @@ import { CoursedetailPage } from '../pages/coursedetail/coursedetail';
     TabsPage,
     RegisterPage,
     LoginPage,
-    CoursedetailPage
+    CoursedetailPage,
+    TabChatPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     WebapiServiceProvider,
     GlobalProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }
