@@ -12,12 +12,14 @@ import { TabsPage } from '../tabs/tabs';
 export class TabHomePage {
   userDatail: any;
   loginStatus: boolean;
+  getTokenKey:any;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public app: App
   ) {
     //การอ่านค่าจากstorage
+    this.getTokenKey = localStorage.getItem('token_key');
     const data = JSON.parse(localStorage.getItem('userData'));
     if (data == null) {
       this.userDatail = "Your are guest";

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "405627466639",
+    "firebase_url": "https://ionicpush-cb508.firebaseio.com",
+    "project_id": "ionicpush-cb508",
+    "storage_bucket": "ionicpush-cb508.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405627466639:android:adeff5c970ee4ef3",
+        "android_client_info": {
+          "package_name": "sek.advice.co.th"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405627466639-5h4228jb507htloqr95hqd965q66qa3p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJWyBBEIUlniWb5G2P6Zog-Z1PqVIqhWg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

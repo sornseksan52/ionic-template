@@ -28,6 +28,11 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { NativeAudio } from '@ionic-native/native-audio'; //native at to privider
 
+// Push Notification
+import { FCM } from '@ionic-native/fcm';
+import { ShowpushdetailPage } from '../pages/showpushdetail/showpushdetail';
+//import { Device } from '@ionic-native/device';
+
 
 var config = {
   apiKey: "AIzaSyAtNLlQy8tkYN2pIkIb_iR68PybrcvYb6s",
@@ -54,7 +59,8 @@ var config = {
     RegisterPage,
     LoginPage,
     CoursedetailPage,
-    TabChatPage
+    TabChatPage,
+    ShowpushdetailPage
   ],
   imports: [
     BrowserModule,
@@ -79,7 +85,8 @@ var config = {
     RegisterPage,
     LoginPage,
     CoursedetailPage,
-    TabChatPage
+    TabChatPage,
+    ShowpushdetailPage
   ],
   providers: [
     StatusBar,
@@ -87,7 +94,8 @@ var config = {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     WebapiServiceProvider,
     GlobalProvider,
-    NativeAudio
+    NativeAudio,
+    FCM
   ]
 })
 export class AppModule { }

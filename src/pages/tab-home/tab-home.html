@@ -50,6 +50,7 @@
         <h2>Good Morning...</h2>
         <p>{{userDatail}}</p>
         <button ion-button color="light" round outline (click)="logout()" *ngIf="loginStatus==false">Logout</button>
+
       </div>
     </div>
   </div>
@@ -114,7 +115,7 @@
   </div>
 
   <div class="row box-cf">
-    MENU 13
+    <textarea  width="100%">{{getTokenKey}}</textarea>
   </div>
   <div class="row box-cf">
     MENU 14
